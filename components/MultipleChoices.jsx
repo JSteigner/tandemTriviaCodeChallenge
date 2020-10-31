@@ -20,9 +20,10 @@ const MultipleChoices = ({
 
   return useMemo(() => (
     <>
-      <Card>
+      <Card className="text-center">
         {choiceItem}
       </Card>
+      <br />
     </>
   ), [memoState]);
 };

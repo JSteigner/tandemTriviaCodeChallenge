@@ -9,7 +9,7 @@ const MultipleChoiceItem = ({ choice, setSelectedAnswer }) => {
 
   return (
     <ListGroup>
-      <ListGroup.Item action onClick={handleChange}>{choice}</ListGroup.Item>
+      <ListGroup.Item action onClick={handleChange}><h5>{choice}</h5></ListGroup.Item>
     </ListGroup>
   );
 };

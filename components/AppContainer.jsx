@@ -53,7 +53,7 @@ const AppContainer = () => {
   }
   return (
     <div>
-      <Container fluid>
+      <Container className="text-center">
       <Question
         currentIndex={currentIndex}
         data={data}
