@@ -13,7 +13,7 @@ const RoundOverScreen = ({ score }) => (
 );
 
 RoundOverScreen.propTypes = {
-  score: propTypes.Number.isRequired,
+  score: propTypes.number.isRequired,
 };
 
 export default RoundOverScreen;

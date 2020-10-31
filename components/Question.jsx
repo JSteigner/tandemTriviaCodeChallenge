@@ -1,10 +1,17 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import Card from 'react-bootstrap/Card';
 
 const Question = ({ currentIndex, data }) => (
-    <div>
-      {data[currentIndex].question}
-    </div>
+  <div>
+    <Card>
+      <Card.Body>
+        <Card.Title>
+        {data[currentIndex].question}
+        </Card.Title>
+      </Card.Body>
+    </Card>
+  </div>
 );
 
 Question.propTypes = {

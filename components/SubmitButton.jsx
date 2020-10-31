@@ -14,7 +14,7 @@ const SubmitButton = ({ selectedAnswer, setSubmittedAnswer }) => {
 };
 
 SubmitButton.propTypes = {
-  selectedAnswer: propTypes.string.isRequired,
+  selectedAnswer: propTypes.string,
   setSubmittedAnswer: propTypes.func.isRequired,
 };
 

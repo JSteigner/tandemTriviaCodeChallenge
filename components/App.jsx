@@ -1,9 +1,9 @@
 import React from 'react';
-import Container from './Container.jsx';
+import AppContainer from './Container.jsx';
 
 const App = () => (
     <div>
-     <Container />
+     <AppContainer />
     </div>
 );
 

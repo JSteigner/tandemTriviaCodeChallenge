@@ -1,14 +1,15 @@
 /* eslint-disable arrow-parens */
 import React, { useState, useEffect } from 'react';
-import data from '../Apprentice_TandemFor400_Data.json';
+import Container from 'react-bootstrap/Container';
 import Question from './Question.jsx';
 import MultipleChoices from './MultipleChoices.jsx';
 import SubmitButton from './SubmitButton.jsx';
 import CorrectAnswerScreen from './CorrectAnswerScreen.jsx';
 import WrongAnswerScreen from './WrongAnswerScreen.jsx';
 import RoundOverScreen from './RoundOverScreen.jsx';
+import data from '../Apprentice_TandemFor400_Data.json';
 
-const Container = () => {
+const AppContainer = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [submittedAnswer, setSubmittedAnswer] = useState(null);
@@ -52,6 +53,7 @@ const Container = () => {
   }
   return (
     <div>
+      <Container fluid>
       <Question
         currentIndex={currentIndex}
         data={data}
@@ -69,8 +71,9 @@ const Container = () => {
         correctAnswer={correctAnswer}
         setSubmittedAnswer={setSubmittedAnswer}
       />
+     </Container>
     </div>
   );
 };
 
-export default Container;
+export default AppContainer;
