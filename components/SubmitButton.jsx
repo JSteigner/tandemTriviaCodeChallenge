@@ -1,11 +1,15 @@
 import React from 'react';
 
-const SubmitButton = () => {
+const SubmitButton = ({ selectedAnswer, setSubmittedAnswer }) => {
+  const submitAnswer = () => {
+    setSubmittedAnswer(selectedAnswer);
+  };
+
   return (
     <div>
-      <button>Submit</button>
+      <button onClick={submitAnswer}>Submit</button>
     </div>
-  )
+  );
 };
 
 export default SubmitButton;
