@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 const RoundOverScreen = ({ score }) => (
   <div>
@@ -10,5 +11,9 @@ const RoundOverScreen = ({ score }) => (
     </div>
   </div>
 );
+
+RoundOverScreen.propTypes = {
+  score: propTypes.Number.isRequired,
+};
 
 export default RoundOverScreen;

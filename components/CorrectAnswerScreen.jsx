@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 const CorrectAnswerScreen = ({ correctAnswer, renderNextQuestion, score }) => (
   <div>
@@ -11,5 +12,11 @@ const CorrectAnswerScreen = ({ correctAnswer, renderNextQuestion, score }) => (
     <button onClick={renderNextQuestion}>Next Question</button>
   </div>
 );
+
+CorrectAnswerScreen.propTypes = {
+  correctAnswer: propTypes.string.isRequired,
+  renderNextQuestion: propTypes.func.isRequired,
+  score: propTypes.number.isRequired,
+};
 
 export default CorrectAnswerScreen;

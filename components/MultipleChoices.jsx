@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import _ from 'underscore';
+import propTypes from 'prop-types';
 
 const MultipleChoices = ({
   currentIndex, setSelectedAnswer, data, correctAnswer,
@@ -69,6 +70,13 @@ const MultipleChoices = ({
       </form>
     </div>
   ), [memoState]);
+};
+
+MultipleChoices.propTypes = {
+  currentIndex: propTypes.number.isRequired,
+  setSelectedAnswer: propTypes.func.isRequired,
+  data: propTypes.array.isRequired,
+  correctAnswer: propTypes.string.isRequired,
 };
 
 export default MultipleChoices;

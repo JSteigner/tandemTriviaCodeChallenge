@@ -1,3 +1,4 @@
+/* eslint-disable arrow-parens */
 import React, { useState, useEffect } from 'react';
 import data from '../Apprentice_TandemFor400_Data.json';
 import Question from './Question.jsx';
