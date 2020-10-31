@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import data from '../Apprentice_TandemFor400_Data.json';
 import Question from './Question.jsx';
 import MultipleChoices from './MultipleChoices.jsx';
 import SubmitButton from './SubmitButton.jsx';
 
 const Container = () => {
-  // const [question, setQuestion] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
@@ -19,8 +18,9 @@ const Container = () => {
       <MultipleChoices
          currentIndex={currentIndex}
          setCurrentIndex={setCurrentIndex}
+         selectedAnswer={selectedAnswer}
          setSelectedAnswer={setSelectedAnswer}
-        //  data={data}
+         data={data}
       />
       <SubmitButton />
     </div>

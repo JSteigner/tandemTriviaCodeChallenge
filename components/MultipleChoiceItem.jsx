@@ -7,14 +7,16 @@ const MultipleChoiceItem = ({ choice, setSelectedAnswer }) => {
 
   return (
     <form>
+      <label>
+        {choice}
         <input
           name={choice}
-          type='radio'
+          type="checkbox"
           value={choice}
           id={choice}
           onChange={handleChange}
         />
-        <label htmlFor={choice}>{choice}</label>
+      </label>
     </form>
   );
 };
