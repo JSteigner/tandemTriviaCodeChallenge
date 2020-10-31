@@ -5,6 +5,7 @@ import MultipleChoices from './MultipleChoices.jsx';
 import SubmitButton from './SubmitButton.jsx';
 import CorrectAnswerScreen from './CorrectAnswerScreen.jsx';
 import WrongAnswerScreen from './WrongAnswerScreen.jsx';
+import RoundOverScreen from './RoundOverScreen.jsx';
 
 const Container = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,7 +46,10 @@ const Container = () => {
         />
       </div>
     );
-  } return (
+  } if (currentIndex === 10) {
+    return <RoundOverScreen score={score} />;
+  }
+  return (
     <div>
       <Question
         currentIndex={currentIndex}
