@@ -1,10 +1,10 @@
 import React from 'react';
-import AppContainer from './Container.jsx';
+import AppContainer from './AppContainer.jsx';
 
 const App = () => (
-    <div>
-     <AppContainer />
-    </div>
+  <div style={{ backgroundColor: 'green', height: 800 }}>
+    <AppContainer />
+  </div>
 );
 
 export default App;
