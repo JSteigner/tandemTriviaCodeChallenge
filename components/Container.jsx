@@ -53,6 +53,7 @@ const Container = () => {
       />
       <MultipleChoices
          currentIndex={currentIndex}
+         selectedAnswer={selectedAnswer}
          setSelectedAnswer={setSelectedAnswer}
          setSubmittedAnswer={setSubmittedAnswer}
          correctAnswer={correctAnswer}
