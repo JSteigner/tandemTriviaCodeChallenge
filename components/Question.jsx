@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 
 const Question = ({ currentIndex, data }) => (
   <div>
-    <Card className="text-center" bg='primary'>
+    <Card className="text-center" bg='info' text='white'>
       <Card.Header as="h2">
         Tandem Trivia Training
       </Card.Header>

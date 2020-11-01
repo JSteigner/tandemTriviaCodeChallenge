@@ -2,7 +2,7 @@ import React from 'react';
 import AppContainer from './AppContainer.jsx';
 
 const App = () => (
-  <div style={{ backgroundColor: 'green', height: 800 }}>
+  <div style={{ backgroundColor: '#8FD694', height: 800 }}>
     <AppContainer />
   </div>
 );

@@ -1,24 +1,24 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, ListGroup } from 'react-bootstrap';
 
 const WrongAnswerScreen = ({ correctAnswer, renderNextQuestion, score }) => (
   <div className="text-center">
-    <Card>
+    <Card bg='info' text='white' border="secondary">
       <Card.Header as="h2">
         Tandem Trivia Training
       </Card.Header>
-      <Card.Body>
-        <Card.Title>
-          Good Try! but {correctAnswer} is Correct.
-        </Card.Title>
-        <Card.Text as="h5">
-          Your Current Score is {score}.
-        </Card.Text>
-      </Card.Body>
-    </Card>
+         <ListGroup>
+           <ListGroup.Item variant='secondary' style={{ fontSize: 25 }}>
+             <div>
+             Good Try! but {correctAnswer} is Correct.
+             </div>
+             Your Current Score is {score}.
+           </ListGroup.Item>
+         </ListGroup>
+        </Card>
     <br />
-    <Button onClick={renderNextQuestion} size="lg">Next Question</Button>
+    <Button onClick={renderNextQuestion} size="lg" variant="dark">Next Question</Button>
   </div>
 );
 

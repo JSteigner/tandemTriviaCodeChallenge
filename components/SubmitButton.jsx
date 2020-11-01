@@ -9,7 +9,7 @@ const SubmitButton = ({ selectedAnswer, setSubmittedAnswer }) => {
 
   return (
     <div className="text-center">
-      <Button onClick={submitAnswer} size="lg">Submit</Button>
+      <Button onClick={submitAnswer} size="lg" variant="dark">Submit</Button>
     </div>
   );
 };

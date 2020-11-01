@@ -20,7 +20,7 @@ const MultipleChoices = ({
 
   return useMemo(() => (
     <>
-      <Card className="text-center">
+      <Card className="text-center" border="secondary">
         {choiceItem}
       </Card>
       <br />
