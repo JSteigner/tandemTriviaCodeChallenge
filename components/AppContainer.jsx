@@ -11,6 +11,7 @@ import data from '../Apprentice_TandemFor400_Data.json';
 
 const AppContainer = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [counter, setCounter] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [submittedAnswer, setSubmittedAnswer] = useState(null);
   const [score, setScore] = useState(0);
@@ -23,7 +24,10 @@ const AppContainer = () => {
   }, [submittedAnswer]);
 
   const renderNextQuestion = () => {
-    setCurrentIndex(value => value + 1);
+    if (currentIndex !== 20) {
+      setCurrentIndex(value => value + 1);
+    }
+    setCounter(value => value + 1);
     setSelectedAnswer(null);
     setSubmittedAnswer(null);
   };
@@ -31,25 +35,38 @@ const AppContainer = () => {
   if (correctAnswer === submittedAnswer) {
     return (
     <div>
-      <CorrectAnswerScreen
-        correctAnswer={correctAnswer}
-        renderNextQuestion={renderNextQuestion}
-        score={score}
-      />
+      <Container className="text-center">
+        <CorrectAnswerScreen
+          correctAnswer={correctAnswer}
+          renderNextQuestion={renderNextQuestion}
+          score={score}
+        />
+      </Container>
     </div>
     );
   } if (correctAnswer !== submittedAnswer && submittedAnswer !== null) {
     return (
       <div>
-        <WrongAnswerScreen
-          correctAnswer={correctAnswer}
-          renderNextQuestion={renderNextQuestion}
-          score={score}
-        />
+        <Container className="text-center">
+          <WrongAnswerScreen
+            correctAnswer={correctAnswer}
+            renderNextQuestion={renderNextQuestion}
+            score={score}
+          />
+        </Container>
       </div>
     );
-  } if (currentIndex === 10) {
-    return <RoundOverScreen score={score} />;
+  } if (currentIndex === 10 || counter === 20) {
+    return (
+      <RoundOverScreen
+        score={score}
+        setScore={setScore}
+        counter={counter}
+        setCounter={setCounter}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+      />
+    );
   }
   return (
     <div>

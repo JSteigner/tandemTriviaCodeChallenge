@@ -5,11 +5,11 @@ import Card from 'react-bootstrap/Card';
 const Question = ({ currentIndex, data }) => (
   <div>
     <Card className="text-center" bg='info' text='white'>
-      <Card.Header as="h2">
+      <Card.Header as="h1">
         Tandem Trivia Training
       </Card.Header>
       <Card.Body>
-        <Card.Title as="h4">
+        <Card.Title as="h3">
         {data[currentIndex].question}
         </Card.Title>
       </Card.Body>
