@@ -1,28 +1,16 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import { Card, Button, ListGroup } from 'react-bootstrap';
+import Styles from '../Styles';
 
-const WrongAnswerScreen = ({ correctAnswer, renderNextQuestion, score }) => {
-  const styles = {
-    header: {
-      height: 160,
-    },
-    listItem: {
-      fontSize: 27, height: 237,
-    },
-    button: {
-      width: 165,
-    },
-  };
-
-  return (
+const WrongAnswerScreen = ({ correctAnswer, renderNextQuestion, score }) => (
     <div className="text-center">
       <Card bg='info' text='white' border="secondary">
-        <Card.Header as="h1" style={styles.header}>
+        <Card.Header as="h1" style={Styles.header}>
           Tandem Trivia Training
         </Card.Header>
           <ListGroup>
-            <ListGroup.Item variant='secondary' style={styles.listItem}>
+            <ListGroup.Item variant='secondary' style={Styles.listItem}>
               <div>
               Good Try! but {correctAnswer} is Correct.
               </div>
@@ -31,10 +19,9 @@ const WrongAnswerScreen = ({ correctAnswer, renderNextQuestion, score }) => {
           </ListGroup>
           </Card>
       <br />
-      <Button onClick={renderNextQuestion} size="lg" variant="dark" style={styles.button}>Next Question</Button>
+      <Button onClick={renderNextQuestion} size="lg" variant="dark" style={Styles.button}>Next Question</Button>
     </div>
-  );
-};
+);
 
 WrongAnswerScreen.propTypes = {
   correctAnswer: propTypes.string.isRequired,

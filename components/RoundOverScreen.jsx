@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 import {
   Container, Card, Button, ListGroup,
 } from 'react-bootstrap';
+import Styles from '../Styles';
 
 const RoundOverScreen = ({
   score,
@@ -23,29 +24,15 @@ const RoundOverScreen = ({
     }
   };
 
-  const styles = {
-    header: {
-      height: 160,
-    },
-    listItem: {
-      fontWeight: 'bold',
-      fontSize: 25,
-      height: 237,
-    },
-    button: {
-      width: 165,
-    },
-  };
-
   return (
     <div>
       <Container className="text-center">
         <Card bg='info' text='white'>
-          <Card.Header as="h2" style={styles.header}>
+          <Card.Header as="h2" style={Styles.header}>
             Tandem Trivia Training
           </Card.Header>
           <ListGroup>
-            <ListGroup.Item variant='secondary' style={styles.listItem}>
+            <ListGroup.Item variant='secondary' style={Styles.roundOverListItem}>
               Round Over, Thanks for Playing!
               <br />
               Your Final Score for this Round is {score}.
@@ -54,8 +41,8 @@ const RoundOverScreen = ({
         </Card>
         <br />
         { currentIndex === 10
-          ? <Button onClick={resetGame} size="lg" variant="dark" style={styles.button}>Play Round 2!</Button>
-          : <Button onClick={resetGame} size="lg" variant="dark" style={styles.button}>Play Again!</Button>
+          ? <Button onClick={resetGame} size="lg" variant="dark" style={Styles.button}>Play Round 2!</Button>
+          : <Button onClick={resetGame} size="lg" variant="dark" style={Styles.button}>Play Again!</Button>
         }
       </Container>
     </div>
