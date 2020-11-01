@@ -1,21 +1,16 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
+import Styles from '../Styles';
 
 const SubmitButton = ({ selectedAnswer, setSubmittedAnswer }) => {
   const submitAnswer = () => {
     setSubmittedAnswer(selectedAnswer);
   };
 
-  const styles = {
-    button: {
-      width: 165,
-    },
-  };
-
   return (
     <div className="text-center">
-      <Button onClick={submitAnswer} size="lg" variant="dark"style={styles.button}>Submit</Button>
+      <Button onClick={submitAnswer} size="lg" variant="dark"style={Styles.button}>Submit</Button>
     </div>
   );
 };

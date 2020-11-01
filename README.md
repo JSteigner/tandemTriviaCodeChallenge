@@ -16,9 +16,10 @@ Trivia Trainer provides users a way to enhance their trivia knowledge. A user ca
 - react-dom
 - prop-types
 - underscore
+- jest
 
 ```javascript
-    "dependencies": {
+ "dependencies": {
     "bootstrap": "^4.5.3",
     "express": "^4.17.1",
     "node-forge": ">=0.10.0",
@@ -30,14 +31,19 @@ Trivia Trainer provides users a way to enhance their trivia knowledge. A user ca
     "underscore": "^1.11.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "@testing-library/react": "^11.1.0",
+    "babel-jest": "^26.6.1",
+    "concurrently": "^5.3.0",
     "eslint": "^7.12.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-react": "^7.21.5",
-    "concurrently": "^5.3.0",
-    "nodemon": "^2.0.6"
-  }
-}
+    "jest": "^26.6.1",
+    "nodemon": "^2.0.6",
+    "react-test-renderer": "^17.0.1"
+  },
 ```
 
 # Installation
@@ -53,6 +59,8 @@ Trivia Trainer provides users a way to enhance their trivia knowledge. A user ca
                                         // express is serving up the bundled files from the dist/ folder
  (npm start)                         // alternatively you can run the server in its own terminal with this command
  (npm run parcel:watch)              // alternatively you can run the parcel-bundler in its own terminal with this command
+ npm run test                        // runs jest test runner
+ npm run test:watch                  // runs test whenever files change (watches)
  ```
 
 # About
@@ -77,6 +85,12 @@ Assumptions
 - Your score does not need to update in real time
 - Results can update on form submit, button click, or any interaction you choose
 - We will provide you with the trivia data such as the questions, correct and incorrect answers via a JSON file.
+
+# extra features I would like to have added
+
+- more unit tests
+- fun gifs for when round ends/answer question
+- back-end with database to store previous round scores
 
 # Contact
 
