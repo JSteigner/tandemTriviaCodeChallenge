@@ -6,11 +6,11 @@ import {
 
 const RoundOverScreen = ({
   score,
-  setCurrentIndex,
+  setScore,
   currentIndex,
+  setCurrentIndex,
   counter,
   setCounter,
-  setScore,
 }) => {
   const resetGame = () => {
     setScore(0);
@@ -23,23 +23,40 @@ const RoundOverScreen = ({
     }
   };
 
+  const styles = {
+    header: {
+      height: 160,
+    },
+    listItem: {
+      fontWeight: 'bold',
+      fontSize: 25,
+      height: 237,
+    },
+    button: {
+      width: 165,
+    },
+  };
+
   return (
     <div>
       <Container className="text-center">
         <Card bg='info' text='white'>
-          <Card.Header as="h2">
+          <Card.Header as="h2" style={styles.header}>
             Tandem Trivia Training
           </Card.Header>
           <ListGroup>
-            <ListGroup.Item variant='secondary' style={{ fontWeight: 'bold', fontSize: 25 }}>
-              Round Over, Thanks for playing!
+            <ListGroup.Item variant='secondary' style={styles.listItem}>
+              Round Over, Thanks for Playing!
               <br />
-              Your final score for this round is {score}.
+              Your Final Score for this Round is {score}.
             </ListGroup.Item>
           </ListGroup>
         </Card>
         <br />
-      <Button onClick={resetGame} size="lg" variant="dark">Play Again!</Button>
+        { currentIndex === 10
+          ? <Button onClick={resetGame} size="lg" variant="dark" style={styles.button}>Play Round 2!</Button>
+          : <Button onClick={resetGame} size="lg" variant="dark" style={styles.button}>Play Again!</Button>
+        }
       </Container>
     </div>
   );

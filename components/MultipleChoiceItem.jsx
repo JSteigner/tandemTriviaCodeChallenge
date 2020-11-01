@@ -7,12 +7,19 @@ const MultipleChoiceItem = ({ choice, setSelectedAnswer }) => {
     setSelectedAnswer(event.target.innerHTML);
   };
 
+  const styles = {
+    listItem: {
+      fontWeight: 'bold',
+      fontSize: 22,
+    },
+  };
+
   return (
     <ListGroup>
       <ListGroup.Item
         action onClick={handleChange}
         variant='secondary'
-        style={{ fontWeight: 'bold', fontSize: 22 }}
+        style={styles.listItem}
       >
         {choice}
       </ListGroup.Item>

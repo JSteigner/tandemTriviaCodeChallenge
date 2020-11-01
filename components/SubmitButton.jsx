@@ -7,9 +7,15 @@ const SubmitButton = ({ selectedAnswer, setSubmittedAnswer }) => {
     setSubmittedAnswer(selectedAnswer);
   };
 
+  const styles = {
+    button: {
+      width: 165,
+    },
+  };
+
   return (
     <div className="text-center">
-      <Button onClick={submitAnswer} size="lg" variant="dark">Submit</Button>
+      <Button onClick={submitAnswer} size="lg" variant="dark"style={styles.button}>Submit</Button>
     </div>
   );
 };
