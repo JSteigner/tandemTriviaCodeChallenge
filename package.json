@@ -8,7 +8,8 @@
     "test:watch": "npm run test -- --watch",
     "dev": "concurrently \"parcel watch index.html\" \"nodemon server.js\"",
     "start": "node server.js",
-    "parcel:watch": "parcel watch index.html"
+    "parcel:watch": "parcel watch index.html",
+    "build": "parcel build index.html"
   },
   "keywords": [],
   "author": "",
