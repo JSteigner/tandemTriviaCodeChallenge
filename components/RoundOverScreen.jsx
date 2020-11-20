@@ -36,11 +36,13 @@ const RoundOverScreen = ({
               Round Over, Thanks for Playing!
               <br />
               Your Final Score for this Round is {score}.
+              <br />
+              You Got {score} out of 10 Questions Correct!
             </ListGroup.Item>
           </ListGroup>
         </Card>
         <br />
-        { currentIndex === 10
+        {currentIndex === 10
           ? <Button onClick={resetGame} size="lg" variant="dark" style={Styles.button}>Play Round 2!</Button>
           : <Button onClick={resetGame} size="lg" variant="dark" style={Styles.button}>Play Again!</Button>
         }
