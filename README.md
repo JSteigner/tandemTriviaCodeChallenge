@@ -66,7 +66,7 @@ Trivia Trainer provides users a way to enhance their trivia knowledge. A user ca
 # About
 
   This application was built for the Apprentice Software Engineer Tandem Code Challenge October 2020.
-  
+  It is live at https://reverent-mccarthy-5d6cc4.netlify.app/ 
   https://madeintandem.com/
 
   Acceptance Criteria
