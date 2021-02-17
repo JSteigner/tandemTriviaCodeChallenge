@@ -10,7 +10,7 @@ const Question = ({ currentIndex, data }) => (
       </Card.Header>
       <Card.Body>
         <Card.Title as="h3">
-        {data[currentIndex].question}
+          {data[currentIndex].question}
         </Card.Title>
       </Card.Body>
     </Card>

@@ -34,15 +34,15 @@ const AppContainer = () => {
 
   if (correctAnswer === submittedAnswer) {
     return (
-    <div>
-      <Container className="text-center">
-        <CorrectAnswerScreen
-          correctAnswer={correctAnswer}
-          renderNextQuestion={renderNextQuestion}
-          score={score}
-        />
-      </Container>
-    </div>
+      <div>
+        <Container className="text-center">
+          <CorrectAnswerScreen
+            correctAnswer={correctAnswer}
+            renderNextQuestion={renderNextQuestion}
+            score={score}
+          />
+        </Container>
+      </div>
     );
   } if (correctAnswer !== submittedAnswer && submittedAnswer !== null) {
     return (
@@ -71,24 +71,24 @@ const AppContainer = () => {
   return (
     <div>
       <Container className="text-center">
-      <Question
-        currentIndex={currentIndex}
-        data={data}
-      />
-      <MultipleChoices
-         currentIndex={currentIndex}
-         selectedAnswer={selectedAnswer}
-         setSelectedAnswer={setSelectedAnswer}
-         setSubmittedAnswer={setSubmittedAnswer}
-         correctAnswer={correctAnswer}
-         data={data}
-      />
-      <SubmitButton
-        selectedAnswer={selectedAnswer}
-        correctAnswer={correctAnswer}
-        setSubmittedAnswer={setSubmittedAnswer}
-      />
-     </Container>
+        <Question
+          currentIndex={currentIndex}
+          data={data}
+        />
+        <MultipleChoices
+          currentIndex={currentIndex}
+          selectedAnswer={selectedAnswer}
+          setSelectedAnswer={setSelectedAnswer}
+          setSubmittedAnswer={setSubmittedAnswer}
+          correctAnswer={correctAnswer}
+          data={data}
+        />
+        <SubmitButton
+          selectedAnswer={selectedAnswer}
+          correctAnswer={correctAnswer}
+          setSubmittedAnswer={setSubmittedAnswer}
+        />
+      </Container>
     </div>
   );
 };

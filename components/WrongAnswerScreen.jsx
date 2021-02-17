@@ -12,12 +12,12 @@ const WrongAnswerScreen = ({ correctAnswer, renderNextQuestion, score }) => (
           <ListGroup>
             <ListGroup.Item variant='secondary' style={Styles.listItem}>
               <div>
-              Wrong Answer but Good Try! {correctAnswer} is Correct.
+                Wrong Answer but Good Try! {correctAnswer} is Correct.
               </div>
               Your Current Score is {score}.
             </ListGroup.Item>
           </ListGroup>
-          </Card>
+      </Card>
       <br />
       <Button onClick={renderNextQuestion} size="lg" variant="dark" style={Styles.button}>Next Question</Button>
     </div>
